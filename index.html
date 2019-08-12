@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <title>Simple LDAP Registrator</title>
+
+</head>
+
+<body>
+    <!-- <img src="URL" alt="альтернативный текст"> -->
+    <center>
+        <div>
+            <img src="img/logo.png" width="600" height="400">
+        </div>
+        <div>
+            <p><font size="5" face="Colibri">Enter your credentials</font></p>
+            <p></p>
+        </div>
+        <div>
+            <label><font size="3" face="Colibri">Login:</font></label>
+            <input id="login" type="text" />
+            <p></p>
+        </div>
+        <div style="position:relative; right:10px">
+            <label><font size="3" face="Colibri">Password:</font></label>
+            <input id="password" type="password" />
+            <p></p>
+        </div>
+        <div style="position:relative;  margin-top:30px; ">
+            <button onClick="sendCred();">create user</button>
+        </div>
+        <div style="position:relative;  margin-top:30px; ">
+            <p id="answer"></p>
+        </div>
+        <div id="loading" style="position:relative;  margin-top:30px; display: none;">
+            <span >Loading...</span>
+        </div>
+    </center>
+            <script>
+                function sendCred() {
+                    var x = document.getElementById("loading");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                    document.getElementById('answer').value = "";
+                    var login = document.getElementById('login').value;
+                    var password = document.getElementById('password').value;
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/registrator?login=' + login + "&password=" + password, true);
+                    //xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                    xhr.onload = function () {
+                        // do something to response
+                        console.log(this.responseText);
+                        var output = this.responseText;
+                        if (output === "Success") {
+                            x.style.display = "none";
+                            var result = output.fontcolor("green");
+                            document.getElementById("answer").innerHTML = result;
+                            
+                        }
+                        else if (output === "Failed") {
+                            x.style.display = "none";
+                            var result = output.fontcolor("red");
+                            document.getElementById("answer").innerHTML = result;
+                            
+                        }
+                    };
+                    xhr.send();
+
+                }
+
+            </script>
+</body>
+</html>

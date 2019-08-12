@@ -1,0 +1,31 @@
+{
+	"credentials": [
+        { 
+            "password": "your_password",
+    	    "host": "192.168.1.1",
+	    "port": "389",
+    	    "bind_dn": "cn=admin,dc=your,dc=domain,dc=com",
+    	    "base_dn": "ou=People,dc=your,dc=domain,dc=com",
+    	    "ds_type": "openldap",
+	    "ssl": "True"
+        } 
+    ],
+    "openldap_settings": [
+        {
+	"objectClass": "inetOrgPerson,organizationalPerson,posixAccount,person",
+	"attribute": "givenName,sn,gidNumber,uid,uidNumber,homeDirectory,userPassword"
+	}	
+	],
+     "openldap_attribute_values":
+	{
+	"sn": "user_sn",
+	"givenName": "user_givenName",
+	"homeDirectory": "/home/"
+	},
+     "default_group_settings":[
+	{
+	"group_object_class": "posixGroup",
+	"group_dn": "cn=newusers,ou=group,dc=your,dc=domain,dc=com"
+	}
+	]
+}

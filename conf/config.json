@@ -1,0 +1,34 @@
+{
+	"credentials": [
+        { 
+            "password": "your_password",
+    	    "host": "192.168.1.1",
+	    "port": "389",
+    	    "bind_dn": "cn=admin,cn=Users,dc=your,dc=domain,dc=com",
+    	    "base_dn": "cn=Users,dc=your,dc=domain,dc=com",
+    	    "ds_type": "activedirectory",
+	    "ssl": "False"
+        } 
+    ],
+	"active_directory_settings": [
+        {
+	"objectClass": "organizationalPerson,top,user,person",
+	"attribute": "givenName,sn,userPassword,displayName"
+	}	
+	],
+     "active_directory_attribute_values":
+	{
+	"sn": "user_sn",
+	"givenName": "user_givenName",
+	"cn": "testuser1",
+	"displayName": "testuser1",
+	"sAMAccountname": "testuser10",
+	"userAccountControl": "544"
+	},
+	     "default_group_settings":[
+	{
+	
+	"group_dn": "cn=new,OU=group,dc=your,dc=domain,dc=com"
+	}
+	]
+}
