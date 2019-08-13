@@ -10,6 +10,7 @@ Install the following Python libraries:
 Edit the conf/config.json file as shown in the examples.
 
 Then run:
+
   **python Simpleldapregistrator.py**
 
 ## Current Features
