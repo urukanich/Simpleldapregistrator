@@ -19,3 +19,4 @@ Then run:
 * Simple logging and error catch
 * You can setup attributes of creating user in config file(like userAccountControl and homeDirectory)
 * Automated adding user to specified group
+<meta name="google-site-verification" content="UbSYFoDGdhvwfiwcCnOsP2X6EJlyHOS1qm13tqAjVe0" />
