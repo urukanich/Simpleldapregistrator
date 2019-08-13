@@ -5,12 +5,12 @@ Hello! It is a simple user registrator for your Active Directory or OpenLDAP ser
 
 Install the following Python libraries:
 
-pip install tornado ldap3 
+  **pip install tornado ldap3**
 
 Edit the conf/config.json file as shown in the examples.
 
 Then run:
-python Simpleldapregistrator.py
+  **python Simpleldapregistrator.py**
 
 ## Current Features
 
