@@ -12,6 +12,10 @@ Edit the conf/config.json file as shown in the examples.
 Then run:
 
   **python Simpleldapregistrator.py**
+  
+Application works on TCP port 9999:
+ 
+ **http://192.168.1.1:9999**
 
 ## Current Features
 
@@ -19,4 +23,3 @@ Then run:
 * Simple logging and error catch
 * You can setup attributes of creating user in config file(like userAccountControl and homeDirectory)
 * Automated adding user to specified group
-<meta name="google-site-verification" content="UbSYFoDGdhvwfiwcCnOsP2X6EJlyHOS1qm13tqAjVe0" />
