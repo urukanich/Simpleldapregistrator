@@ -14,7 +14,7 @@ Then run:
   **python Simpleldapregistrator.py**
   
 Application works on TCP port 9999:
- 
+For example: 
  **http://192.168.1.1:9999**
 
 ## Current Features
